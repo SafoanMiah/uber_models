@@ -3,3 +3,9 @@ plotly
 matplotlib
 seaborn
 pandas
+folium
+os
+sys
+sklearn
+pickle
+numpy
