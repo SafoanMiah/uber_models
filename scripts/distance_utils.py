@@ -1,6 +1,4 @@
-#https://stackoverflow.com/a/4913653
-
-from math import radians, cos, sin, asin, sqrt
+from math import radians, sin, cos, sqrt, asin
 
 def haversine(lon1, lat1, lon2, lat2):
     """
@@ -8,7 +6,10 @@ def haversine(lon1, lat1, lon2, lat2):
     on the earth (specified in decimal degrees)
     """
     # convert decimal degrees to radians 
-    lon1, lat1, lon2, lat2 = map(radians, [lon1, lat1, lon2, lat2])
+    lon1 = radians(lon1)
+    lat1 = radians(lat1)
+    lon2 = radians(lon2)
+    lat2 = radians(lat2)
 
     # haversine formula 
     dlon = lon2 - lon1 
