@@ -1,8 +1,8 @@
 # $$\text{Uber Price Prediction And Regression Model Analysis}$$
 
 ## $$\text{Description:}$$
-This project provides a comprehensive and extenstive approach to predicting Uber prices using a variety of regression models. 
-Trough the use of **data cleaning**, **exploratory data analysis**, **model training**, **hyperparameter tuning**, and **model evaluation**. The project is structured to demonstrate a full cycle of data processing and modeling to achieve accurate predictions.
+This project provides a comprehensive and extensive approach to predicting Uber prices using a variety of regression models. 
+Through the use of **data cleaning**, **exploratory data analysis**, **model training**, **hyperparameter tuning**, and **model evaluation**. The project is structured to demonstrate a full cycle of data processing and modelling to achieve accurate predictions.
 
 ---
 ### Cleaning:
