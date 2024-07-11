@@ -3,7 +3,7 @@ import sqlite3
 def create_database():
     
     #connect to sqlite
-    conn = sqlite3.connect('sql_db/uber_rides.db')
+    conn = sqlite3.connect('uber_cost_prediction/sql_db/uber_rides.db')
     cursor = conn.cursor()
     
     #create table
