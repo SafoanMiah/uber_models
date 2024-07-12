@@ -8,6 +8,7 @@ st.markdown("<h2 style='text-align: center;'> Description </h2>", unsafe_allow_h
 st.markdown("""
 This project provides a comprehensive and extensive approach to predicting Uber prices using a variety of regression models. 
 Through the use of **data cleaning**, **exploratory data analysis**, **model training**, **hyperparameter tuning**, and **model evaluation**. The project is structured to demonstrate a full cycle of data processing and modelling to achieve accurate predictions.
+Interactive Streamlit application designed to predict Uber prices. Web application makes use of the best-performing model from the comprehensive analysis and allows users to input parameters for real-time predictions. Paired with SQL Database usage to store entries.
 """)
 
 #file structure
@@ -15,25 +16,25 @@ st.markdown("<h2 style='text-align: center;'> File Structure </h2>", unsafe_allo
 st.markdown("""
 ```
 ├── data/
-│ ├── uber_rides.csv # Raw data from:
-│ └── processed_data.csv # Processed and cleaned data
-
+│ ├── uber_rides.csv            # Raw data from:  
+│ └── processed_data.csv        # Processed and cleaned data
+│
 ├── model/
-│ └── trained_model.pkl # Best score trained model
+│ └── trained_model.pkl         # Best score trained model
 │
 ├── notebooks/
-│ ├── data_cleaning.ipynb # Data Cleaning Notebook
-│ ├── data_analysis.ipynb # Exploratory Data Analysis
-│ ├── model_training.ipynb # Model Tuning Training and Comparison
+│ ├── data_cleaning.ipynb       # Data Cleaning Notebook
+│ ├── data_analysis.ipynb       # Exploratory Data Analysis
+│ ├── model_training.ipynb      # Model Tuning Training and Comparison
 │
 ├── scripts/
-│ ├── distance_utils.py # Functions for distance calculations
-│ ├── dataframe_utils.py # Functions for DataFrame
+│ ├── distance_utils.py         # Functions for distance calculations
+│ ├── dataframe_utils.py        # Functions for DataFrame
 │
 ├── sql_db/
-│ ├── create_db.py # Script to create DataBase (SQL)
-│ ├── load_to_sql.py # Inserting CSV into Dataframe (SQL)
-│ └── uber_rides.db # SQLite DataDabse with processed data
+│ ├── create_db.py              # Script to create DataBase (SQL)
+│ ├── load_to_sql.py            # Inserting CSV into Dataframe (SQL)
+│ └── uber_rides.db             # SQLite DataDabse with processed data
 │
 ├── requirements.txt
 └── README.md
@@ -82,7 +83,11 @@ Trough hyperparameter tuning, model training, and performance evaluation using m
   - Root Mean Squared Error
   - $R^2$ Score
 ---
-### Extra:
-  - SQL Database implementation
+### Streamlit:
+- Interactive input of pickup and dropoff locations (both address and coordinates)
+- Optional time and date input for predictions
+- Real-time prediction of Uber ride prices
+- Visualization of pickup and dropoff locations on a map
+- SQL Database of entered rides with options to view and clear entries 
 ---
 """)
