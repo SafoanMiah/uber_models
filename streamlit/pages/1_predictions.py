@@ -11,6 +11,9 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'scripts')))
 import distance_utils
 
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'scripts')))
+import streamlit_db
+
 #title / description
 st.markdown("<h1 style='text-align: center;'> Price Prediction Model </h1>", unsafe_allow_html=True)
 st.markdown('---')
@@ -19,7 +22,7 @@ st.markdown('---')
 #default exmaple
 pickup_address = 'Canada Water' 
 dropoff_address = 'Shoreditch'
-create()
+streamlit_db.create()
 
 
 #using adress
@@ -111,7 +114,7 @@ show_price = f'${round(float(price.item()), 2)}'
 if distance < 20 and valid: #limit of out model
     if st.button('Submit'):
         st.success('Entry Inserted', icon="✅")
-        insert(show_price, show_distance, pickup_address, dropoff_address, date)
+        streamlit_db.insert(show_price, show_distance, pickup_address, dropoff_address, date)
 
     col1, col2 = st.columns(2)
     with col1:
@@ -135,11 +138,11 @@ st.markdown('---')
 st.markdown("<h3 style='text-align: center;'>Uber Ride Entries:</h3>", unsafe_allow_html=True)
 
 if st.button('CLEAR'):
-    clear()
+    streamlit_db.clear()
     st.success('Database Cleared', icon="✅")
 
 #Display Database
-df = read()
+df = streamlit_db.read()
 st.write(df)
 
 #clear button

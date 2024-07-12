@@ -33,8 +33,6 @@ def insert(price, distance, pickup, dropoff, time):
     conn.commit()
     conn.close()
 
-    st.success('Entry Inserted')
-
 def read():
     conn = sqlite3.connect('streamlit_rides.db')
     
