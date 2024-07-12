@@ -82,7 +82,7 @@ with col2:
 
 
 #model prediction
-with open('trained_model.pkl', 'rb') as f:
+with open('model/trained_model.pkl', 'rb') as f:
     model = pickle.load(f)
 
 distance = distance_utils.haversine(pickup_long, pickup_lat, dropoff_long, dropoff_lat)
