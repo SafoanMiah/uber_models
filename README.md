@@ -4,6 +4,9 @@
 This project provides a comprehensive and extensive approach to predicting Uber prices using a variety of regression models. 
 Through the use of **data cleaning**, **exploratory data analysis**, **model training**, **hyperparameter tuning**, and **model evaluation**. The project is structured to demonstrate a full cycle of data processing and modelling to achieve accurate predictions.
 
+## <div align="center">[Streamlit Application](https://regression-price.streamlit.app/predictions)</div>
+Interactive Streamlit application designed to predict Uber prices. Web application makes use of the best-performing model from the comprehensive analysis and allows users to input parameters for real-time predictions. Paired with SQL Database usage to store entries.
+
 ---
 ### Cleaning:
 Improving data quality by:
@@ -46,8 +49,12 @@ Trough hyperparameter tuning, model training, and performance evaluation using m
   - Root Mean Squared Error
   - $R^2$ Score
 ---
-### Extra:
-  - SQL Database implementation
+### Streamlit:
+- Interactive input of pickup and dropoff locations (both address and coordinates)
+- Optional time and date input for predictions
+- Real-time prediction of Uber ride prices
+- Visualization of pickup and dropoff locations on a map
+- SQL Database of entered rides with options to view and clear entries
 ---  
 ## $$\text{File Structure:}$$
 
