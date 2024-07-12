@@ -4,7 +4,7 @@ import numpy as np
 import pickle
 from geopy.geocoders import Nominatim
 from datetime import datetime
-from ..streamlit_db import create, read, insert, clear
+from .streamlit_db import create, read, insert, clear
 
 import sys
 import os
