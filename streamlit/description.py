@@ -8,7 +8,7 @@ st.markdown("<h2 style='text-align: center;'> Description </h2>", unsafe_allow_h
 st.markdown("""
 This project provides a comprehensive and extensive approach to predicting Uber prices using a variety of regression models. 
 Through the use of **data cleaning**, **exploratory data analysis**, **model training**, **hyperparameter tuning**, and **model evaluation**. The project is structured to demonstrate a full cycle of data processing and modelling to achieve accurate predictions.
-Interactive Streamlit application designed to predict Uber prices. Web application makes use of the best-performing model from the comprehensive analysis and allows users to input parameters for real-time predictions. Paired with SQL Database usage to store entries.
+All paired with an interactive Streamlit application designed to predict Uber prices. Web application makes use of the best-performing model from the comprehensive analysis and allows users to input parameters for real-time predictions. Paired with SQL Database usage to store entries.
 """)
 
 #file structure
