@@ -4,7 +4,7 @@ import numpy as np
 import pickle
 from geopy.geocoders import Nominatim
 from datetime import datetime
-import streamlit_db
+from ..streamlit_db import create, read, insert, clear
 
 import sys
 import os
@@ -19,7 +19,7 @@ st.markdown('---')
 #default exmaple
 pickup_address = 'Canada Water' 
 dropoff_address = 'Shoreditch'
-streamlit_db.create()
+create()
 
 
 #using adress
@@ -111,7 +111,7 @@ show_price = f'${round(float(price.item()), 2)}'
 if distance < 20 and valid: #limit of out model
     if st.button('Submit'):
         st.success('Entry Inserted', icon="✅")
-        streamlit_db.insert(show_price, show_distance, pickup_address, dropoff_address, date)
+        insert(show_price, show_distance, pickup_address, dropoff_address, date)
 
     col1, col2 = st.columns(2)
     with col1:
@@ -135,11 +135,11 @@ st.markdown('---')
 st.markdown("<h3 style='text-align: center;'>Uber Ride Entries:</h3>", unsafe_allow_html=True)
 
 if st.button('CLEAR'):
-    streamlit_db.clear()
+    clear()
     st.success('Database Cleared', icon="✅")
 
 #Display Database
-df = streamlit_db.read()
+df = read()
 st.write(df)
 
 #clear button
